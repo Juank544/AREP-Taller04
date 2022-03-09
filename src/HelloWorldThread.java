@@ -6,7 +6,11 @@ public class HelloWorldThread extends Thread{
     }
 
     public static void main(String[] args){
-        (new HelloWorldThread()).start();
+        int i = 5;
+        while (i>0) {
+            (new HelloWorldThread()).start();
+            i = i-1;
+        }
         System.out.println("Hello from main: " + (Thread.currentThread().toString()));
     }
 }
